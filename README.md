@@ -1,3 +1,8 @@
+![Python](https://img.shields.io/badge/Python-3.x-blue)
+![Machine Learning](https://img.shields.io/badge/ML-Project-green)
+![Status](https://img.shields.io/badge/Status-Completed-success)
+
+
 # 💳 Credit Card Fraud Detection using Machine Learning
 
 ## 📌 About the Project
