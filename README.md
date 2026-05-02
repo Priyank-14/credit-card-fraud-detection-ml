@@ -120,8 +120,11 @@ Logistic Regression | ~96% | ~0.93
 Random Forest | ~99% | ~0.98  
 
 ### 🔍 Key Insight
-In fraud detection systems, **Recall is more important than Accuracy** because missing fraudulent transactions can lead to significant financial loss.
+## 🔍 Key Insight
 
+In fraud detection systems, **Recall is more important than Accuracy**, because missing fraudulent transactions (false negatives) can lead to significant financial loss.
+
+Therefore, the model is optimized to minimize false negatives and improve fraud detection capability.
 ---
 
 ## 📌 Key Learnings
