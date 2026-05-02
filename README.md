@@ -14,6 +14,15 @@ The project implements a complete machine learning pipeline including data prepr
 
 ---
 
+## 🚀 Project Highlights
+
+- Handles highly imbalanced dataset using SMOTE  
+- Achieves ~99% accuracy with Random Forest  
+- Focuses on recall to minimize fraud detection errors  
+- End-to-end ML pipeline (EDA → preprocessing → modeling → evaluation)  
+
+---
+
 ## 🧠 Machine Learning Approach
 
 - Type: Supervised Learning (Binary Classification)
