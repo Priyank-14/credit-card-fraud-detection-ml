@@ -99,6 +99,17 @@ The project generates the following visualizations:
 
 All outputs are saved in the `output/` directory.
 
+
+## 📸 Output Preview
+
+### Class Distribution
+![Class Distribution](output/class_distribution.png)
+
+### SMOTE Balanced Data
+![Balanced Data](output/balanced_data.png)
+
+### Model Comparison
+![Model Comparison](output/model_comparison.png)
 ---
 
 ## 📊 Results
