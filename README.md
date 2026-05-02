@@ -36,8 +36,9 @@ The project implements a complete machine learning pipeline including data prepr
 
 ---
 
-## 📁 Project Structure
+<h2>📁 Project Structure</h2>
 
+<pre>
 credit-card-fraud-detection-ml/
 │
 ├── src/
@@ -54,10 +55,10 @@ credit-card-fraud-detection-ml/
 ├── report/
 │   ├── Project_Report.docx
 │   └── presentation.pptx
-│   
 │
 ├── requirements.txt
 └── README.md
+</pre>
 
 ---
 
