@@ -3,55 +3,81 @@
 ![Status](https://img.shields.io/badge/Status-Completed-success)
 ![License](https://img.shields.io/badge/License-MIT-yellow)
 
-
 # 💳 Credit Card Fraud Detection using Machine Learning
 
-## 📌 About the Project
-This project focuses on detecting fraudulent credit card transactions using machine learning techniques.
+---
 
-The dataset is highly imbalanced, making fraud detection a challenging task. To address this, SMOTE (Synthetic Minority Over-sampling Technique) is applied to improve the model’s ability to identify minority class (fraud) transactions.
+## 📌 Overview
 
-The project implements a complete machine learning pipeline including data preprocessing, exploratory data analysis, feature scaling, model training, and evaluation.
+Credit card fraud is a critical financial problem where even a small percentage of fraudulent transactions can lead to significant losses.
+
+This project builds a **machine learning-based fraud detection system** that identifies suspicious transactions while handling **highly imbalanced data**, where fraudulent cases are extremely rare.
 
 ---
 
-## 🚀 Project Highlights
+## 🎯 Problem Statement
 
-- Handles highly imbalanced dataset using SMOTE  
-- Achieves ~99% accuracy with Random Forest  
-- Focuses on recall to minimize fraud detection errors  
-- End-to-end ML pipeline (EDA → preprocessing → modeling → evaluation)  
+Traditional classification models struggle with fraud detection due to:
+
+* Severe class imbalance (fraud ≪ normal transactions)
+* High cost of false negatives (missed fraud cases)
+
+👉 The goal is to build a model that **maximizes fraud detection (recall)** while maintaining overall performance.
 
 ---
 
-## 🧠 Machine Learning Approach
+## 🚀 Key Highlights
 
-- Type: Supervised Learning (Binary Classification)
+* Handles imbalanced dataset using **SMOTE**
+* Implements **end-to-end ML pipeline**
+* Compares **Logistic Regression vs Random Forest**
+* Focuses on **recall over accuracy**
+* Achieves ~99% accuracy with strong recall performance
 
-### Algorithms Used:
-- Logistic Regression — Baseline linear model  
-- Random Forest — Ensemble model for improved performance  
+---
 
-### Additional Technique:
-- SMOTE — Handles class imbalance by generating synthetic samples  
+## 🧠 Machine Learning Pipeline
+
+1. **Data Preprocessing**
+
+   * Handling missing values (if any)
+   * Feature scaling (standardization)
+
+2. **Exploratory Data Analysis (EDA)**
+
+   * Class imbalance visualization
+   * Transaction amount distribution
+   * Correlation analysis
+
+3. **Handling Imbalance**
+
+   * Applied **SMOTE** to generate synthetic fraud samples
+
+4. **Model Training**
+
+   * Logistic Regression (baseline)
+   * Random Forest (ensemble model)
+
+5. **Evaluation**
+
+   * Accuracy
+   * Recall (primary focus)
+   * Confusion Matrix
 
 ---
 
 ## 📊 Dataset
 
-- Name: Credit Card Fraud Detection Dataset  
-- Source: https://www.kaggle.com/datasets/mlg-ulb/creditcardfraud  
+* Source: https://www.kaggle.com/datasets/mlg-ulb/creditcardfraud
+* Contains anonymized features (V1–V28) using PCA
+* Target:
 
-### Key Characteristics:
-- Highly imbalanced dataset  
-- PCA-transformed features (V1–V28) for privacy  
-- Target variable:
-  - 0 → Normal Transaction
-  - 1 → Fraudulent Transaction  
+  * 0 → Normal
+  * 1 → Fraud
 
 ---
 
-<h2>📁 Project Structure</h2>
+## 📁 Project Structure
 
 <pre>
 credit-card-fraud-detection-ml/
@@ -62,7 +88,6 @@ credit-card-fraud-detection-ml/
 ├── output/
 │   ├── class_distribution.png
 │   ├── amount_distribution.png
-│   ├── amount_outliers.png
 │   ├── correlation_heatmap.png
 │   ├── balanced_data.png
 │   └── model_comparison.png
@@ -79,92 +104,75 @@ credit-card-fraud-detection-ml/
 
 ## ⚙️ How to Run
 
-1. Install dependencies  
-pip install -r requirements.txt  
-
-2. Run the project  
-python src/fraud_detection.py  
+```bash
+pip install -r requirements.txt
+python src/fraud_detection.py
+```
 
 ---
 
-## 📈 Output
-
-The project generates the following visualizations:
-
-- Class distribution (before balancing)  
-- Transaction amount distribution  
-- Outlier detection (boxplot)  
-- Correlation heatmap  
-- Balanced dataset visualization (after SMOTE)  
-- Model performance comparison  
-
-All outputs are saved in the `output/` directory.
-
-
-## 📸 Output Preview
+## 📸 Output Visualizations
 
 ### Class Distribution
+
 ![Class Distribution](output/class_distribution.png)
 
 ### SMOTE Balanced Data
+
 ![Balanced Data](output/balanced_data.png)
 
 ### Model Comparison
+
 ![Model Comparison](output/model_comparison.png)
+
 ---
 
 ## 📊 Results
 
-Model | Accuracy | Recall  
-------|----------|--------  
-Logistic Regression | ~96% | ~0.93  
-Random Forest | ~99% | ~0.98  
+| Model               | Accuracy | Recall |
+| ------------------- | -------- | ------ |
+| Logistic Regression | ~96%     | ~0.93  |
+| Random Forest       | ~99%     | ~0.98  |
 
-### 🔍 Key Insight
+---
+
 ## 🔍 Key Insight
 
-In fraud detection systems, **Recall is more important than Accuracy**, because missing fraudulent transactions (false negatives) can lead to significant financial loss.
+In fraud detection systems, **Recall is more important than Accuracy**, because:
 
-Therefore, the model is optimized to minimize false negatives and improve fraud detection capability.
+> Missing a fraudulent transaction (false negative) can result in direct financial loss.
+
+This project prioritizes detecting fraud effectively, even at the cost of slightly lower precision.
+
 ---
 
 ## 📌 Key Learnings
 
-- Handling highly imbalanced datasets using SMOTE  
-- Importance of recall in fraud detection problems  
-- Feature scaling and preprocessing techniques  
-- Model comparison using confusion matrix and classification metrics  
+* Handling imbalanced datasets using SMOTE
+* Importance of evaluation metrics beyond accuracy
+* End-to-end ML workflow implementation
+* Model comparison and performance analysis
 
 ---
 
 ## 🔮 Future Improvements
 
-- Real-time fraud detection system  
-- Deployment as a web application  
-- Use of deep learning and anomaly detection models  
-
----
-
-## 🧾 Requirements
-
-pandas  
-numpy  
-matplotlib  
-seaborn  
-scikit-learn  
-imbalanced-learn  
+* Real-time fraud detection system
+* Deployment using Flask / Streamlit
+* Advanced models (XGBoost, Deep Learning)
+* Anomaly detection techniques
 
 ---
 
 ## 👨‍💻 Author
 
-Priyank Sinha  
-B.Tech CSE (UPES)  
+**Priyank Sinha**
+B.Tech CSE | UPES
 
-GitHub: https://github.com/Priyank-14  
+GitHub: https://github.com/Priyank-14
 
 ---
 
 ## ⭐ Note
 
-This project is developed for academic and learning purposes and demonstrates practical implementation of machine learning techniques in fraud detection.
+This project demonstrates practical implementation of machine learning techniques for solving real-world fraud detection problems.
